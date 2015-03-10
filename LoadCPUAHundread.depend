@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1425994933 source:e:\documents\codeblocks-projs\multythread\main.cpp
+	<time.h>
+	<process.h>
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+
