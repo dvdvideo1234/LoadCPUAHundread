@@ -2,10 +2,9 @@
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>
+#include "main.h"
 
-#define ARR_LEN 100000000
-
-int iArr[ARR_LEN];
+int iArr[LOADCPU_ARR_LEN];
 
 void gotoXY(short int x,short int y)
 {
@@ -16,9 +15,9 @@ void Thread( void* pParams )
 {
   int i, num = 0;
 
-  while ( 1 )
+  while(42)
   {
-    for (i = 0; i < ARR_LEN; i++)
+    for (i = 0; i < LOADCPU_ARR_LEN; i++)
     {
       iArr[i] = (i*(--num))-i;
     }
@@ -29,19 +28,40 @@ int main( void )
 {
   int i = 0, iThr;
 
-  printf("Desired threads count: ");
-  scanf("%d",&iThr);
-  for(i=0;i<iThr;i++)
+  if(LOADCPU_RUN_BG)
   {
-      _beginthread( Thread, 1000, NULL );
+    ShowWindow(GetForegroundWindow(),SW_HIDE);
+    iThr = LOADCPU_THR_CNT;
+  }
+  else
+  {
+    printf("Desired threads count: ");
+    scanf("%d",&iThr);
   }
 
-  printf("Threads allocated !\n");
-  i = 0;
-  while( 1 )
+  if(iThr <= 0)
   {
-    gotoXY(0,2);
-    printf("Iteration: %d            \n",i++);
+    return 0;
+  }
+
+  for(i=0;i<iThr;i++)
+  {
+    _beginthread( Thread, 1000, NULL );
+  }
+
+  if(!LOADCPU_RUN_BG)
+  {
+    printf("Threads allocated !\n");
+    i = 0;
+  }
+
+  while(42)
+  {
+    if(!LOADCPU_RUN_BG)
+    {
+      gotoXY(0,2);
+      printf("Iteration: %d            \n",i++);
+    }
   }
 
   return 0;

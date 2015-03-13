@@ -1,14 +1,16 @@
 # depslib dependency file v1.0
-1425994933 source:e:\documents\codeblocks-projs\multythread\main.cpp
-	<time.h>
+1426247134 source:e:\documents\codeblocks-projs\multythread\main.cpp
 	<process.h>
 	<stdio.h>
 	<conio.h>
 	<windows.h>
+	"main.h"
 
 1425998936 source:e:\documents\codeblocks-projs\multythread\loadcpuahundread\main.cpp
 	<process.h>
 	<stdio.h>
 	<conio.h>
 	<windows.h>
+
+1426247248 e:\documents\codeblocks-projs\multythread\main.h
 
