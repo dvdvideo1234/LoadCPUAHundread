@@ -8,10 +8,10 @@ int iArr[LOADCPU_ARR_LEN];
 
 void gotoXY(short int x,short int y)
 {
-   SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), (COORD){x,y} );
+   SetConsoleCursorPosition(GetStdHandle( STD_OUTPUT_HANDLE ),(COORD){x,y});
 }
 
-void Thread( void* pParams )
+void Thread(void* pParams)
 {
   int i, num = 0;
 
@@ -44,9 +44,9 @@ int main( void )
     return 0;
   }
 
-  for(i=0;i<iThr;i++)
+  for(i = 0; i < iThr; i++)
   {
-    _beginthread( Thread, 1000, NULL );
+    _beginthread(Thread, 1000, NULL);
   }
 
   if(!LOADCPU_RUN_BG)

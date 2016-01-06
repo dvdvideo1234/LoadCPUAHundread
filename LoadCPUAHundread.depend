@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1426247134 source:e:\documents\codeblocks-projs\multythread\main.cpp
+1452068162 source:e:\documents\codeblocks-projs\multythread\main.cpp
 	<process.h>
 	<stdio.h>
 	<conio.h>
@@ -12,5 +12,5 @@
 	<conio.h>
 	<windows.h>
 
-1426247248 e:\documents\codeblocks-projs\multythread\main.h
+1452068162 e:\documents\codeblocks-projs\multythread\main.h
 
